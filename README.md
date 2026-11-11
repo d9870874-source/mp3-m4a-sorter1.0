@@ -46,40 +46,73 @@ fpcalc.exe в PATH Windows
 
 
 5.Основные команды
+
 Предварительный просмотр
+
 python audio_recognizer_audd_mp3_m4a.py "C:\Users\ADMIN\Desktop\музыка"
+
 Показывает предполагаемые изменения, но не записывает теги и не переименовывает оригинальные
 файлы.
+
 Записать теги и переименовать
+
 python audio_recognizer_audd_mp3_m4a.py "C:\Users\ADMIN\Desktop\музыка" --apply
+
 Изменения вносятся непосредственно в исходные MP3/M4A. Автоматических резервных копий нет.
+
 Отключить AudD командой aud_off
+
 python audio_recognizer_audd_mp3_m4a.py "C:\Users\ADMIN\Desktop\музыка" aud_off --apply
+
 AudD будет пропущен. Продолжат работать AcoustID и поиск MusicBrainz по имени файла. Ключ
+
 AcoustID всё равно потребуется.
+
 Альтернативная команда отключения
+
 python audio_recognizer_audd_mp3_m4a.py "C:\Users\ADMIN\Desktop\музыка" --aud-off --apply
+
 Заменить существующие теги и обложки
+
 python audio_recognizer_audd_mp3_m4a.py "C:\Users\ADMIN\Desktop\музыка" --apply --overwrite
+
 Параметр --overwrite разрешает заменять уже заполненные поля и существующую обложку. Используй
+
 его только при необходимости.
+
 Изменить длину фрагмента для аудиоотпечатка
+
 python audio_recognizer_audd_mp3_m4a.py "C:\Users\ADMIN\Desktop\музыка" --length 180
+
 По умолчанию используется 120 секунд. Параметр --length влияет на расчёт отпечатка AcoustID, а не
+
 изменяет продолжительность исходной песни.
+
 Изменить минимальный балл AcoustID
+
 python audio_recognizer_audd_mp3_m4a.py "C:\Users\ADMIN\Desktop\музыка" --min-score 0.60
+
 По умолчанию порог равен 0.70 (70%). Более низкий порог может дать больше совпадений, но
+
 повышает риск ошибочного выбора.
+
 Указать путь к fpcalc.exe вручную
+
 python audio_recognizer_audd_mp3_m4a.py "C:\Users\ADMIN\Desktop\музыка" --fpcalc
+
 "C:\Tools\Chromaprint\fpcalc.exe"
+
 Замени пример пути на фактическое расположение fpcalc.exe.
 
 Полезные ссылки:
+
 Python: https://www.python.org/downloads/
+
 AudD: https://dashboard.audd.io/
+
 AcoustID / Chromaprint: https://acoustid.org/chromaprint/
+
 FFmpeg: https://ffmpeg.org/download.htm
+
 
 Скрипт может ошибиться или же не найти песню если ее нет в базе данных так что лучше всегда перепроверить что он написал 
