@@ -18,8 +18,11 @@ Audio Recognizer AudD + AcoustID — MP3 и M4A
 fpcalc.exe в PATH Windows
 
 3.1.Открой https://dashboard.audd.io/.
+
 3.2.Зарегистрируйся или войди в аккаунт.
+
 3.3.Найди API Token в личном кабинете и скопируй его.
+
 3.4.При запуске вставь токен в запрос AudD API Token.
 Если AudD не нужен, при запросе токена нажми Enter. Также его можно отключить командой aud_off.
 
