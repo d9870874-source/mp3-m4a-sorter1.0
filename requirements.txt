@@ -1,0 +1,3 @@
+mutagen>=1.47.0
+pyacoustid>=1.3.0
+musicbrainzngs>=0.7.1
